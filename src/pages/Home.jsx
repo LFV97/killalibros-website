@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
+import { FreeStoryBar } from "../components/FreeStoryBar";
 import { PricingSection } from "../components/PricingSection";
 import { ContactForm } from "../components/ContactForm";
 import { useTranslation } from 'react-i18next';
@@ -13,18 +14,13 @@ export default function Home() {
   return (
     <div className="container mx-auto">
       <Header />
-      {/* <FreeStoryBar /> */}
-      <div className="bg-info bg-opacity-75 text-black text-center py-2">
-        <p><strong>«Filistín»</strong> Cuentos para apoyar a Palestina. Descarga gratuita <a href="https://drive.google.com/file/d/1kuS6P8fevdrXnNtpkfXWFWoskyOdEgr4/view" className="text-info">aquí</a>.</p>
-      </div>
-      <main className="p-8">
+      <FreeStoryBar />
+      <main>
         <h2>{t("welcome")}</h2>
         <p>{t("description")}</p>
-        <div className="carousel">
-          {/* <img src="../images/portadas/011.jpg" width={20} alt="Libro destacado" /> */}
-        </div>        
       </main>
       <StoreSection />
+      {/* <PublishedBooks /> */}
       <PricingSection />
       <ContactForm />
       <Footer />

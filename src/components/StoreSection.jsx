@@ -1,8 +1,13 @@
 import { useState, useEffect } from "react";
+import "../styles/StoreSection.css";
 import Carousel from "react-bootstrap/Carousel";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
 
 export function StoreSection() {
   const [books, setBooks] = useState([]);
+  const [publishedBooks, setPublishedBooks] = useState([]);
+  const [index, setIndex] = useState(0);
+  const itemsPerPage = 6;
 
   useEffect(() => {
     // Cambia esta ruta al archivo JSON local
@@ -13,43 +18,145 @@ export function StoreSection() {
         }
         return response.json();
       })
-      .then((data) => setBooks(data))
+      .then((data) => {
+        const latestBooks = data.sort((a, b) => b.id - a.id).slice(0, 2);
+        setBooks(latestBooks);
+        setPublishedBooks(data);
+      })
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
 
   return (
-    <section className="text-center my-4">
-      <h2 className="text-light">Tienda de KillaLibros</h2>
-      <p className="text-light">Compra nuestros libros en Amazon</p>
-      {books.length > 0 ? (
-        <Carousel>
-          {books.map((book, index) => (
-            <Carousel.Item key={index}>
-              <img
-                src={book.image}
-                alt={book.title}
-                className="d-block w-50 mx-auto"
-              />
-              <Carousel.Caption>
-                <div className="bg-dark bg-gradient bg-opacity-50 p-3">
-                  <h3>{book.title}</h3>
-                  <p>{book.author}</p>
-                  <a
-                    href={book.link}
-                    className="btn btn-warning"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Comprar en Amazon
-                  </a>
-                </div>
-              </Carousel.Caption>
-            </Carousel.Item>
-          ))}
-        </Carousel>
-      ) : (
-        <p className="text-light">Cargando libros...</p>
-      )}
-    </section>
+    <section className="text-center">
+    {/* <h2 className="text-light">Tienda de KillaLibros</h2>
+    <p className="text-light">Compra nuestros libros en Amazon</p> */}
+    <Container>
+      <Row className="justify-content-center">
+        {books.length === 2 ? (
+          <Carousel interval={15000} indicators={true} className="w-100">
+            {books.map((book, index) => (
+              <Carousel.Item key={index}>
+                <Card className="bg-dark text-light border-light p-3 h-100 d-flex flex-column w-75 mx-auto">
+                  <Row className="align-items-center">
+                    <Col xs={12} md={4} className="text-center">
+                      <Card.Img
+                        variant="top"
+                        src={book.image}
+                        alt={book.title}
+                        className="img-fluid"
+                      />
+                    </Col>
+                    <Col xs={12} md={8} className="text-left d-flex flex-column justify-content-between">
+                      <Card.Body>
+                        <Card.Title>{book.title}</Card.Title>
+                        <Card.Subtitle className="mb-2 text-muted">{book.author}</Card.Subtitle>
+                        <Card.Text>{book.description}</Card.Text>
+                        <Button
+                          variant="warning"
+                          href={book.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Comprar en Amazon
+                        </Button>
+                      </Card.Body>
+                    </Col>
+                  </Row>
+                </Card>
+              </Carousel.Item>
+            ))}
+          </Carousel>
+        ) : (
+          <Row className="justify-content-center">
+            {books.map((book, index) => (
+              <Col key={index} xs={12} md={6} className="mb-4 d-flex justify-content-center">
+                <Card className="bg-dark text-light border-light p-3 h-100 d-flex flex-column">
+                  <Row className="align-items-center">
+                    <Col xs={12} md={4} className="text-center">
+                      <Card.Img
+                        variant="top"
+                        src={book.image}
+                        alt={book.title}
+                        className="img-fluid"
+                      />
+                    </Col>
+                    <Col xs={12} md={8} className="text-left d-flex flex-column justify-content-between">
+                      <Card.Body>
+                        <Card.Title>{book.title}</Card.Title>
+                        <Card.Subtitle className="mb-2 text-muted">{book.author}</Card.Subtitle>
+                        <Card.Text>{book.description}</Card.Text>
+                        <Button
+                          variant="warning"
+                          href={book.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Comprar en Amazon
+                        </Button>
+                      </Card.Body>
+                    </Col>
+                  </Row>
+                </Card>
+              </Col>
+            ))}
+          </Row>
+        )}
+      </Row>
+    </Container>
+
+     {/* Sección de libros publicados */}
+     <h2 className="text-light mt-5">Libros Publicados</h2>
+      <Carousel activeIndex={index} onSelect={(selectedIndex) => setIndex(selectedIndex)} interval={null} className="w-100 mx-auto">
+        {Array.from({ length: Math.ceil(publishedBooks.length / itemsPerPage) }, (_, pageIndex) => (
+          <Carousel.Item key={pageIndex}>
+            <Container>
+              <Row className="justify-content-center">
+                {publishedBooks
+                  .slice(pageIndex * itemsPerPage, (pageIndex + 1) * itemsPerPage)
+                  .map((book, index) => (
+                    <Col key={index} xs={12} sm={6} md={4} className="mb-4 d-flex justify-content-center book-image">
+                      <Card className="bg-dark text-light border-light p-3 book-card">
+                        <Card.Img
+                          variant="top"
+                          src={book.image}
+                          alt={book.title}
+                          className="img-fluid"
+                          onClick={() => window.open(book.link, "_blank")}
+                        />
+                        <Card.Body className="text-center">
+                          <Card.Title>{book.title}</Card.Title>
+                        </Card.Body>
+                      </Card>
+                    </Col>
+                  ))}
+              </Row>
+            </Container>
+          </Carousel.Item>
+        ))}
+      </Carousel>
+  </section>
   );
+
 }
+
+   {/* <h2 className="text-light mt-5">Libros Publicados</h2>
+      <Container>
+        <Row className="justify-content-center">
+          {publishedBooks.map((book, index) => (
+            <Col key={index} xs={12} sm={6} md={4} lg={3} className="mb-4 d-flex justify-content-center book-image">
+              <Card className="bg-dark text-light border-light p-3 book-card">
+                <Card.Img
+                  variant="top"
+                  src={book.image}
+                  alt={book.title}
+                  className="img-fluid"
+                  onClick={() => window.open(book.link, "_blank")}
+                />
+                <Card.Body className="text-center">
+                  <Card.Title>{book.title}</Card.Title>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </Container> */}

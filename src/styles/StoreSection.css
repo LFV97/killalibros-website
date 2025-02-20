@@ -1,0 +1,9 @@
+.book-image {
+    transition: transform 0.3s ease-in-out;
+}
+
+.book-image:hover {
+transform: scale(1.1);
+cursor: pointer;
+}
+  

@@ -1,3 +1,4 @@
+import { Footer } from "../components/Footer";
 import Header from "../components/Header";
 import { useTranslation } from 'react-i18next';
 
@@ -5,7 +6,7 @@ export default function PrivacyPolicy() {
   const { t, i18n } = useTranslation();
 
   return (
-      <div className="container my-4 text-light d-flex flex-column align-items-center">
+    <div className="container mx-auto text-light d-flex flex-column align-items-center py-5 mt-5 mb-5">
         <Header />
         <h1>{t("privacy_policy.title")}</h1>
         <div className="mt-75 w-75">
@@ -28,6 +29,7 @@ export default function PrivacyPolicy() {
         </div>
       </div>
     );
+  }
   //   <div className="container col-12 my-4 text-light d-flex flex-column align-items-center">
   //     <Header />
   //       <h1>Política de Privacidad</h1>
@@ -86,4 +88,3 @@ export default function PrivacyPolicy() {
   //     </div>
   //   </div>
   // );
-}

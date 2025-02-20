@@ -1,3 +1,4 @@
+import { Footer } from "../components/Footer";
 import Header from "../components/Header";
 import { useTranslation } from 'react-i18next';
 
@@ -5,7 +6,7 @@ export default function CookiesPolicy() {
   const { t, i18n } = useTranslation();
 
   return (
-    <div className="container my-4 text-light d-flex flex-column align-items-center">
+    <div className="container pb-4 text-light d-flex flex-column align-items-center pt-5 mt-5">
       <Header />
       <div className="mt-5 w-75">
         <h1>{t("cookies_policy.title")}</h1>

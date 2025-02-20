@@ -1,6 +1,9 @@
 {
+    "home": "Início",
+    "questions": "Perguntas frequentes",
+    "aboutUs": "Sobre nós",
     "welcome": "Bem-vindo ao KillaLibros",
-    "description": "Explore nossa seleção de livros.",
+    "description": "Explore os nossos livros mais recentes",
     "privacy_policy": {
         "title": "Política de Privacidade",
         "description": "A KillaLibros respeita a sua privacidade e compromete-se a proteger os dados pessoais que coleta. Esta política descreve como coletamos, usamos e protegemos as suas informações.",
@@ -62,10 +65,114 @@
         },
         {
             "title": "4. Contato",
-            "content": "Se tiver perguntas sobre esta política, envie um mail para info@killalibros.com."
+            "content": "Se tiver perguntas sobre esta política, envie um mail para <a href='mailto:info@killalibros.com'>info@killalibros.com</a>."
         }
         ]
     },
-    "back": "Voltar ao início"
+    "back": "Voltar ao início",
+    "pricing": {
+    "title": "Preços e Serviços",
+    "description": "Oferecemos serviços personalizados para revisão ortotipográfica, de estilo ou ambos.",
+    "service": "Serviço",
+    "price_per_word": "Preço por palavra",
+    "orthotypographic_review": "Revisão ortotipográfica",
+    "style_review": "Revisão de estilo",
+    "orthotypographic_and_style_review": "Revisão ortotipográfica e de estilo",
+    "request_quote": "Para solicitar um orçamento personalizado, envie-nos um e-mail com os seguintes dados:",
+    "title_field": "Título do livro",
+    "genre": "Gênero",
+    "pages": "Número de páginas",
+    "spellcheck_used": "Você utilizou alguma ferramenta de correção ortográfica ou gramatical? (Sim/Não)",
+    "style_preference": "Você tem alguma preferência de estilo ou formato? (Opcional)",
+    "requested_services": "Servicios solicitados",
+    "request_button": "Solicitar orçamento"
+  },
+  "faq": {
+    "title": "Perguntas frequentes",
+    "description": "KILLALIBROS: Editora de coedição com um selo sério e profissional",
+    "questions": [
+      {
+        "question": "Que tipo de editora é a KillaLibros?",
+        "answer": "A KillaLibros é uma editora de coedição. Isso significa que o autor ou autores arcam com os custos de edição das cópias que desejam."
+      },
+      {
+        "question": "Existe um número mínimo de cópias que o autor deve comprar?",
+        "answer": "Sim, cada autor deve comprar pelo menos 30 cópias."
+      },
+      {
+        "question": "Se eu quiser enviar um original, como faço?",
+        "answer": "Recebemos seu original em info@killalibros.com. Você deve enviá-lo em formato editável, como Word ou outro similar, e também em PDF."
+      },
+      {
+        "question": "Quanto tempo leva para responder?",
+        "answer": "No máximo, daremos uma resposta em um mês. Se nesse prazo você não tiver notícias nossas, significa que não estamos interessados no seu manuscrito."
+      },
+      {
+        "question": "A correção dos textos é obrigatória?",
+        "answer": "Acreditamos que um texto mal escrito reflete mal no autor e na nossa editora. Se acharmos que seu texto precisa de uma revisão ortotipográfica, informaremos e enviaremos um orçamento."
+      },
+      {
+        "question": "Se eu precisar de ilustrações, vocês podem adicioná-las?",
+        "answer": "Claro, contamos com ilustradores na nossa equipe editorial e também forneceremos um orçamento."
+      },
+      {
+        "question": "Como solicito um orçamento?",
+        "answer": "Para fornecer um orçamento, precisamos do texto completo e pré-maquetado em A5, que é o formato padrão de livro de bolso. O pacote mínimo inclui a maquetização e o envio. O valor pode variar dependendo do número de cópias solicitadas. Se você também quiser ilustrações e revisão, os custos devem ser adicionados ao pacote mínimo."
+      },
+      {
+        "question": "Posso vender meu livro na Amazon?",
+        "answer": "Sim. Nós cuidamos disso. Você receberá 10% do valor faturado pela Amazon para nossa editora, pois a plataforma retém mais de 50%."
+      },
+      {
+        "question": "Posso vender minhas cópias livremente?",
+        "answer": "Sim, as cópias que você solicitar e receber são suas para dispor como quiser. Você pode vendê-las ou doá-las."
+      },
+      {
+        "question": "A KillaLibros faz distribuição?",
+        "answer": "Não, nós apenas editamos, não distribuímos."
+      },
+      {
+        "question": "De quem são os direitos do texto?",
+        "answer": "Nós não retemos os direitos do texto, que pertencem sempre ao autor, mas mantemos os direitos de edição. Se o autor quiser publicar seu texto em outra editora posteriormente, poderá fazê-lo sem problemas, mas com uma edição diferente. Se as ilustrações foram fornecidas pela KillaLibros, o autor não poderá usá-las em outra edição."
+      },
+      {
+        "question": "Posso incluir ilustrações no meu texto?",
+        "answer": "Sim, mas elas devem estar adaptadas aos critérios técnicos que indicaremos."
+      },
+      {
+        "question": "Que gêneros vocês publicam?",
+        "answer": "Todos, prosa, poesia, teatro, ensaio, etc. Também publicamos textos infantojuvenis, para os quais podemos fornecer ilustrações."
+      }
+    ],
+    "contact_text": "Para qualquer dúvida, não hesite em nos contatar em "
+  },
+  "about": {
+    "title": "Sobre Nós",
+    "subtitle": "KILLALIBROS: Editora de coedição com um selo sério",
+    "sections": [
+      {
+        "title": "O que diferencia a KILLALIBROS de outras editoras de coedição?",
+        "content": "A KILLALIBROS não apenas publica livros, mas também garante que cada obra cumpra com os padrões de qualidade e profissionalismo esperados de uma editora tradicional."
+      },
+      {
+        "title": "Selo editorial sério",
+        "content": "A KILLALIBROS assegura a qualidade de cada livro publicado, oferecendo serviços de diagramação profissional, revisão ortográfica e de estilo, capas atrativas e impressão de alta qualidade."
+      },
+      {
+        "title": "Pacote mínimo completo",
+        "content": "Nosso pacote mínimo inclui tudo o que é necessário para a publicação: diagramação, impressão e envio, facilitando a publicação do livro para o autor."
+      },
+      {
+        "title": "Serviços adicionais",
+        "content": "Oferecemos serviços adicionais como revisão ortotipográfica, de estilo e ilustração para aprimorar ainda mais a qualidade de cada obra."
+      },
+      {
+        "title": "Orçamento personalizado",
+        "content": "Cada autor recebe um orçamento personalizado para escolher os serviços que melhor se adaptem às suas necessidades e possibilidades."
+      }
+    ],
+    "contact_text": "Para mais informações ou para solicitar um orçamento sem compromisso, entre em contato conosco em"
+  }
+  
 }
   

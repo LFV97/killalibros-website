@@ -13,6 +13,11 @@
   -moz-osx-font-smoothing: grayscale;
 } */
 
+* {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -23,17 +28,15 @@ a:hover {
 }
 
 #root {
-  /* width: 100vw; */
-  /* height: 100vh; */
+  min-width: 100vw !important;
+  max-width: 100% !important;
+  min-height: 100vh !important;
   background-color: #0a0a0a;
-  margin: 0;
+  margin: 0 auto;
+  padding: 0;
   display: flex;
   /* place-items: center; */
-  min-width: 100vw;
-  min-height: 100vh;
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
   color: #ddd;
 }
 
@@ -46,7 +49,14 @@ header {
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  z-index: 100;
 }
+
+.freeBook{
+  z-index: 90;
+  background-color: #b7d6f8;
+}
+
 nav a {
   color: white;
   margin-left: 1rem;
@@ -58,6 +68,7 @@ nav a:hover {
 }
 main {
   padding: 2rem;
+  margin-top: 12vh;
   text-align: center;
 }
 .btn-primary {
@@ -92,8 +103,9 @@ main {
   transition: transform 0.5s;
 }
 
-
-
+footer {
+  width: 100vw;
+}
 
 
 

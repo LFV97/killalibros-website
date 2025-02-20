@@ -1,0 +1,66 @@
+/* styles/Header.css */
+
+.navbar {
+    width: 100vw !important;  /* Asegura que ocupa toda la pantalla */
+    max-width: 100% !important;
+    background-color: #004080 !important; /* Azul oscuro */
+    padding: 10px 0;
+    z-index: 1040;
+}
+
+.navbar-container {
+width: 100% !important;
+max-width: 100% !important;
+}
+
+.navbar-brand {
+font-size: 1.8rem;
+font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+font-size: 1.2rem;
+transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+color: #07012b !important;
+}
+
+.navbar-toggler {
+border: none;
+outline: none;
+}
+
+/* .navbar-toggler-icon {
+background-color: white;
+} */
+
+/* Botones de idioma */
+.navbar .btn {
+font-size: 0.9rem;
+transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+.navbar .btn:hover {
+background-color: #07012b;
+transform: scale(1.1);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .navbar-collapse {
+        background-color: #002060; /* Azul oscuro en dispositivos móviles */
+        padding: 10px;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar .btn {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+  
