@@ -4,6 +4,7 @@ import { PricingSection } from "../components/PricingSection";
 import { ContactForm } from "../components/ContactForm";
 import { useTranslation } from 'react-i18next';
 import { StoreSection } from "../components/StoreSection";
+import { Footer } from "../components/Footer";
 
 
 export default function Home() {
@@ -26,6 +27,7 @@ export default function Home() {
       <StoreSection />
       <PricingSection />
       <ContactForm />
+      <Footer />
     </div>
   );
 }

@@ -1,5 +1,72 @@
 {
     "welcome": "Bienvenido a KillaLibros",
-    "description": "Explora nuestra selección de libros."
+    "description": "Explora nuestra selección de libros.",
+    "privacy_policy": {
+        "title": "Política de Privacidad",
+        "description": "KillaLibros respeta tu privacidad y se compromete a proteger los datos personales que recopila. Esta política describe cómo recopilamos, usamos y protegemos tu información.",
+        "sections": [
+        {
+            "title": "1. Información general",
+            "content": "Esta política detalla cómo gestionamos los datos personales que recopilamos de nuestros usuarios."
+        },
+        {
+            "title": "2. Datos que recopilamos",
+            "content": [
+            "Nombre y correo electrónico (a través del formulario de contacto).",
+            "Información de navegación y cookies (para mejorar la experiencia de usuario)."
+            ]
+        },
+        {
+            "title": "3.  Uso de la información",
+            "subdescription": "Utilizamos los datos personales para:",
+            "content": [
+            "Responder a consultas enviadas a través del formulario de contacto.",
+            "Mejorar los servicios ofrecidos en la página web."
+            ]
+        },
+        {
+            "title": "4. Terceros",
+            "content": "No compartimos datos personales con terceros, excepto cuando sea requerido por la ley."
+        },
+        {
+            "title": "5. Derechos del usuario",
+            "content": [
+            "Solicitar acceso a tus datos personales.",
+            "Rectificar o eliminar tus datos.",
+            "Retirar tu consentimiento para el procesamiento de datos."
+            ]
+        },
+        {
+            "title": "6. Contacto",
+            "content": "Si tienes preguntas sobre esta política, envíanos un correo info@killalibros.com."
+        }
+        ]
+    },
+    "cookies_policy": {
+        "title": "Política de Cookies",
+        "description": "En KillaLibros utilizamos cookies para mejorar tu experiencia de navegación. Esta política describe los tipos de cookies que utilizamos y cómo puedes gestionarlas.",
+        "sections": [
+        {
+            "title": "1. ¿Qué son las cookies?",
+            "content": "Las cookies son pequeños archivos que se almacenan en tu dispositivo para mejorar tu experiencia en el sitio web."
+        },
+        {
+            "title": "2. Tipos de cookies que usamos",
+            "content": [
+            "Cookies esenciales: Necesarias para el funcionamiento del sitio.",
+            "Cookies de análisis: Para recopilar estadísticas sobre el uso del sitio."
+            ]
+        },
+        {
+            "title": "3. Configuración",
+            "content": "Puedes gestionar tus preferencias de cookies en la configuración de tu navegador.."
+        },
+        {
+            "title": "4. Contacto",
+            "content": "Si tienes preguntas sobre esta política, envíanos un correo a info@killalibros.com."
+        }
+        ]
+    },
+    "back": "Volver al inicio"
 }
   

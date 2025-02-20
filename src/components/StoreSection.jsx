@@ -6,7 +6,7 @@ export function StoreSection() {
 
   useEffect(() => {
     // Cambia esta ruta al archivo JSON local
-    fetch("/books.json")
+    fetch("http://localhost:5000/api/books")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Error al cargar los datos");
@@ -31,16 +31,18 @@ export function StoreSection() {
                 className="d-block w-50 mx-auto"
               />
               <Carousel.Caption>
-                <h3>{book.title}</h3>
-                <p>{book.author}</p>
-                <a
-                  href={book.link}
-                  className="btn btn-warning"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Comprar en Amazon
-                </a>
+                <div className="bg-dark bg-gradient bg-opacity-50 p-3">
+                  <h3>{book.title}</h3>
+                  <p>{book.author}</p>
+                  <a
+                    href={book.link}
+                    className="btn btn-warning"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Comprar en Amazon
+                  </a>
+                </div>
               </Carousel.Caption>
             </Carousel.Item>
           ))}
