@@ -8,7 +8,7 @@ export default function PrivacyPolicy() {
     <div className="container mx-auto text-dark d-flex flex-column align-items-center py-5 mt-5 mb-5">
         <NavbarTop />
         <h1>{t("privacy_policy.title")}</h1>
-        <hr className="style-seven" />
+        <hr className="style-seven" style={{margin: "1px"}} />
         <div className="mt-75 w-75">
           <p>{t("privacy_policy.description")}</p>
           {t("privacy_policy.sections", { returnObjects: true }).map((section, index) => (
@@ -21,7 +21,7 @@ export default function PrivacyPolicy() {
                   ))}
                 </ul>
               ) : (
-                <p>{section.content}</p>
+                <p dangerouslySetInnerHTML={{ __html: section.content }}></p>
               )}
             </div>
           ))}

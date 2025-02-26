@@ -20,7 +20,7 @@ export default function CookiesPolicy() {
                 ))}
               </ul>
             ) : (
-              <p>{section.content}</p>
+              <p dangerouslySetInnerHTML={{ __html: section.content }}></p>
             )}
           </div>
         ))}

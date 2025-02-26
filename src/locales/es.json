@@ -42,7 +42,7 @@
         },
         {
             "title": "6. Contacto",
-            "content": "Si tienes preguntas sobre esta política, envíanos un correo info@killalibros.com."
+            "content": "Si tienes preguntas sobre esta política, envíanos un correo <a href='mailto:info@killalibros.com'>info@killalibros.com</a>."
         }
         ]
     },
@@ -67,7 +67,7 @@
         },
         {
             "title": "4. Contacto",
-            "content": "Si tienes preguntas sobre esta política, envíanos un correo a ${<a href='mailto:info@killalibros.com'>info@killalibros.com</a>}."
+            "content": "Si tienes preguntas sobre esta política, envíanos un correo a <a href='mailto:info@killalibros.com'>info@killalibros.com</a>."
         }
         ]
     },

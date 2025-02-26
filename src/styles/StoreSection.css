@@ -17,6 +17,7 @@ hr.style-seven {
     width: 80%;
     margin: auto;
 }
+
 hr.style-seven:before { /* Not really supposed to work, but does */
     display: block;
     content: "";
@@ -27,3 +28,37 @@ hr.style-seven:before { /* Not really supposed to work, but does */
     border-width: 0 0 1px 0;
     border-radius: 20px;
 }
+
+.containerStore {
+  margin-top: 75vh;;
+}
+
+@media (max-width: 768px) {
+  .containerStore {
+    margin-top: 45vh;
+  }
+}
+
+@media (max-width: 425px) {
+  .containerStore {
+    margin-top: 75vh;
+  }
+}
+
+/* @media (max-width: 768px) {
+    .carousel .carousel-inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .carousel-item {
+      text-align: center;
+    }
+  
+    .book-card {
+      width: 90%;
+      margin: auto;
+    }
+  }
+   */

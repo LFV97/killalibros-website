@@ -10,7 +10,7 @@ export function PricingSection() {
       <p className="text-dark">{t("pricing.description")}</p>
 
       <div className="pricing-table mx-auto">
-        <table className="table">
+        <table class="table bg-none text-light">
           <thead>
             <tr>
               <th>{t("pricing.service")}</th>

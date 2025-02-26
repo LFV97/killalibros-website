@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "../styles/StoreSection.css";
-import Carousel from "react-bootstrap/Carousel";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import Carousel from "react-bootstrap/Carousel";
 
 export function StoreSection() {
   const [books, setBooks] = useState([]);
@@ -27,7 +27,7 @@ export function StoreSection() {
   }, []);
 
   return (
-    <section className="text-center" style={{marginTop: '75vh'}}>
+    <section className="text-center containerStore">
     {/* <Container>
       <Row className="justify-content-center">
         {books.length === 2 ? (
@@ -106,14 +106,14 @@ export function StoreSection() {
      <h2 className="display-4 text-dark mt-5" style={{overflow: 'hidden'}}>Libros Publicados</h2>
      <hr className="style-seven" />
       <Carousel activeIndex={index} onSelect={(selectedIndex) => setIndex(selectedIndex)} interval={null} className="w-100 mx-auto">
-        {Array.from({ length: Math.ceil(publishedBooks.length / itemsPerPage) }, (_, pageIndex) => (
+      {Array.from({ length: Math.ceil(publishedBooks.length / (window.innerWidth < 768 ? 1 : itemsPerPage)) }, (_, pageIndex) => (
           <Carousel.Item key={pageIndex}>
             <Container>
               <Row className="justify-content-center">
                 {publishedBooks
-                  .slice(pageIndex * itemsPerPage, (pageIndex + 1) * itemsPerPage)
+                  .slice(pageIndex * (window.innerWidth < 768 ? 1 : itemsPerPage), (pageIndex + 1) * (window.innerWidth < 768 ? 1 : itemsPerPage))
                   .map((book, index) => (
-                    <Col key={index} xs={8} sm={6} md={4} lg={3} className="mb-4 d-flex justify-content-center book-image">
+                    <Col key={index} xs={10} sm={6} md={4} lg={3} className="mb-4 d-flex justify-content-center book-image">
                       <Card className="bg-dark text-light border-light p-3 book-card">
                         <Card.Img
                           variant="top"
@@ -125,6 +125,14 @@ export function StoreSection() {
                         <Card.Body className="text-center">
                           <Card.Title>{book.title}</Card.Title>
                         </Card.Body>
+                         <Button
+                          variant="warning"
+                          href={book.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Comprar en Amazon
+                        </Button>
                       </Card>
                     </Col>
                   ))}
