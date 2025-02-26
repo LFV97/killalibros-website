@@ -1,66 +1,91 @@
 /* styles/Header.css */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
 
-.navbar {
-    width: 100vw !important;  /* Asegura que ocupa toda la pantalla */
-    max-width: 100% !important;
-    background-color: #004080 !important; /* Azul oscuro */
-    padding: 10px 0;
-    z-index: 1040;
+
+.header-container {
+    background-image: url("./src/assets/bg_header_3.png");
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 75vh;
+    display: flex;
+    align-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1030;
 }
 
-.navbar-container {
-width: 100% !important;
-max-width: 100% !important;
+.welcome-title {
+  margin-top: 5%;
+  padding-left: 5%;
+  text-align: start;
+  text-shadow:4px 4px 6px rgba(0,0,0,0.4);
 }
 
-.navbar-brand {
-font-size: 1.8rem;
-font-weight: bold;
-}
-
-.navbar-nav .nav-link {
-font-size: 1.2rem;
-transition: color 0.3s ease-in-out;
-}
-
-.navbar-nav .nav-link:hover {
-color: #07012b !important;
-}
-
-.navbar-toggler {
-border: none;
-outline: none;
-}
-
-/* .navbar-toggler-icon {
-background-color: white;
+/* .welcome {
+  font-family: "Pinyon Script", cursive;
 } */
 
-/* Botones de idioma */
-.navbar .btn {
-font-size: 0.9rem;
-transition: background-color 0.3s ease-in-out, transform 0.2s;
+/* .book-mockup:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  overflow: hidden;
+  } */
+
+/* .navbar .title {
+    font-family: 'Montserrat', sans-serif;
+} */
+
+.featured-books {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 50px;
+    max-width: 80%;
+    margin: auto;
+    flex-wrap: wrap;
+  }
+  
+.featured-books h3{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    overflow: hidden;
 }
 
-.navbar .btn:hover {
-background-color: #07012b;
-transform: scale(1.1);
-}
-
-/* Responsividad */
-@media (max-width: 768px) {
-    .navbar-collapse {
-        background-color: #002060; /* Azul oscuro en dispositivos móviles */
-        padding: 10px;
-    }
-
-    .navbar-nav {
-        text-align: center;
-    }
-
-    .navbar .btn {
-        width: 100%;
-        margin: 5px 0;
-    }
-}
+  .book-mockup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .mockup-container {
+    width: 100%;
+    height: auto;
+    position: relative;
+    perspective: 1000px;
+  }
+  
+  .mockup-container img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  .mockup-container .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
   

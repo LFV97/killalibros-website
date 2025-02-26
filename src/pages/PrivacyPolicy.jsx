@@ -1,19 +1,19 @@
-import { Footer } from "../components/Footer";
-import Header from "../components/Header";
+import NavbarTop from "../components/NavbarTop";
 import { useTranslation } from 'react-i18next';
 
 export default function PrivacyPolicy() {
   const { t, i18n } = useTranslation();
 
   return (
-    <div className="container mx-auto text-light d-flex flex-column align-items-center py-5 mt-5 mb-5">
-        <Header />
+    <div className="container mx-auto text-dark d-flex flex-column align-items-center py-5 mt-5 mb-5">
+        <NavbarTop />
         <h1>{t("privacy_policy.title")}</h1>
+        <hr className="style-seven" />
         <div className="mt-75 w-75">
           <p>{t("privacy_policy.description")}</p>
           {t("privacy_policy.sections", { returnObjects: true }).map((section, index) => (
             <div key={index}>
-              <h3>{section.title}</h3>
+              <h4 className='h4'><strong>{section.title}</strong></h4>
               {Array.isArray(section.content) ? (
                 <ul>
                   {section.content.map((item, idx) => (
@@ -25,7 +25,7 @@ export default function PrivacyPolicy() {
               )}
             </div>
           ))}
-          <p><a href="/" className="text-light">{t("back")}</a></p>
+          <p><a href="/" className="text-dark">{t("back")}</a></p>
         </div>
       </div>
     );

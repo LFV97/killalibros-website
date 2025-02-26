@@ -7,7 +7,7 @@ export function StoreSection() {
   const [books, setBooks] = useState([]);
   const [publishedBooks, setPublishedBooks] = useState([]);
   const [index, setIndex] = useState(0);
-  const itemsPerPage = 6;
+  const itemsPerPage = 4;
 
   useEffect(() => {
     // Cambia esta ruta al archivo JSON local
@@ -27,10 +27,8 @@ export function StoreSection() {
   }, []);
 
   return (
-    <section className="text-center">
-    {/* <h2 className="text-light">Tienda de KillaLibros</h2>
-    <p className="text-light">Compra nuestros libros en Amazon</p> */}
-    <Container>
+    <section className="text-center" style={{marginTop: '75vh'}}>
+    {/* <Container>
       <Row className="justify-content-center">
         {books.length === 2 ? (
           <Carousel interval={15000} indicators={true} className="w-100">
@@ -102,10 +100,11 @@ export function StoreSection() {
           </Row>
         )}
       </Row>
-    </Container>
+    </Container> */}
 
      {/* Sección de libros publicados */}
-     <h2 className="text-light mt-5">Libros Publicados</h2>
+     <h2 className="display-4 text-dark mt-5" style={{overflow: 'hidden'}}>Libros Publicados</h2>
+     <hr className="style-seven" />
       <Carousel activeIndex={index} onSelect={(selectedIndex) => setIndex(selectedIndex)} interval={null} className="w-100 mx-auto">
         {Array.from({ length: Math.ceil(publishedBooks.length / itemsPerPage) }, (_, pageIndex) => (
           <Carousel.Item key={pageIndex}>
@@ -114,7 +113,7 @@ export function StoreSection() {
                 {publishedBooks
                   .slice(pageIndex * itemsPerPage, (pageIndex + 1) * itemsPerPage)
                   .map((book, index) => (
-                    <Col key={index} xs={12} sm={6} md={4} className="mb-4 d-flex justify-content-center book-image">
+                    <Col key={index} xs={8} sm={6} md={4} lg={3} className="mb-4 d-flex justify-content-center book-image">
                       <Card className="bg-dark text-light border-light p-3 book-card">
                         <Card.Img
                           variant="top"

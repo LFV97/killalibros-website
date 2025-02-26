@@ -1,0 +1,74 @@
+/* Título estilizado */
+/* .pricing-title {
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+} */
+
+/* Subrayado decorativo debajo del título */
+.underline {
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(to right, #c0f4f8, #0044ff);
+    margin: 10px auto 20px;
+    border-radius: 5px;
+}
+
+/* Tabla de precios */
+.pricing-table {
+    width: 80%;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Tabla con colores mejorados */
+.pricing-table .table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.pricing-table th {
+    background-color: #004080;
+    color: white;
+    padding: 15px;
+}
+
+.pricing-table td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.pricing-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Lista de requisitos */
+.pricing-list {
+    list-style: none;
+    padding: 0;
+    font-size: 1rem;
+}
+
+.pricing-list li {
+    padding: 5px 0;
+    border-left: 4px solid #004080;
+    padding-left: 10px;
+    margin-bottom: 5px;
+}
+
+/* Botón de solicitud */
+.request-btn {
+    background: linear-gradient(to right, #a7badb, #004080);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.request-btn:hover {
+    background: linear-gradient(to right, #004080, #a7badb);
+    transform: scale(1.05);
+}

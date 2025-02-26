@@ -3,7 +3,8 @@
     "questions": "Preguntas frecuentes",
     "aboutUs": "Sobre nosotros",
     "welcome": "Bienvenido a KillaLibros",
-    "description": "Explora nuestros últimos libros.",
+    "description": "Explora nuestros últimos libros",
+    "buy_on_amazon": "Compra en Amazon",
     "privacy_policy": {
         "title": "Política de Privacidad",
         "description": "KillaLibros respeta tu privacidad y se compromete a proteger los datos personales que recopila. Esta política describe cómo recopilamos, usamos y protegemos tu información.",
@@ -130,7 +131,7 @@
                 "answer": "Sí, las copias que nos encargues y te lleguen son para que dispongas de ellas como tú quieras. Puedes venderlas o regalarlas."
             },
             {
-                "question": "KillaLibros hace distribución?",
+                "question": "¿KillaLibros hace distribución?",
                 "answer": "No, nosotros solo editamos, no distribuimos."
             },
             {

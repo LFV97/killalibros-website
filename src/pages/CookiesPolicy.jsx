@@ -1,18 +1,18 @@
-import { Footer } from "../components/Footer";
-import Header from "../components/Header";
+import NavbarTop from "../components/NavbarTop";
 import { useTranslation } from 'react-i18next';
 
 export default function CookiesPolicy() {
   const { t, i18n } = useTranslation();
 
   return (
-    <div className="container pb-4 text-light d-flex flex-column align-items-center pt-5 mt-5">
-      <Header />
-      <div className="mt-5 w-75">
+    <div className="container mx-auto text-dark d-flex flex-column align-items-center pt-5 mt-5">
+      <NavbarTop />
         <h1>{t("cookies_policy.title")}</h1>
+        <hr className="style-seven" style={{margin: "1px"}} />
+        <div className="w-75">
         {t("cookies_policy.sections", { returnObjects: true }).map((section, index) => (
           <div key={index}>
-            <h3>{section.title}</h3>
+            <h4 className='h4'><strong>{section.title}</strong></h4>
             {Array.isArray(section.content) ? (
               <ul>
                 {section.content.map((item, idx) => (
@@ -24,7 +24,7 @@ export default function CookiesPolicy() {
             )}
           </div>
         ))}
-        <p><a href="/" className="text-light">{t("back")}</a></p>
+        <p><a href="/" className="text-dark">{t("back")}</a></p>
       </div>
     </div>
   );

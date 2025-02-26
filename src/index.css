@@ -1,17 +1,7 @@
-/* :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-} */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
   box-sizing: border-box;
@@ -31,7 +21,11 @@ a:hover {
   min-width: 100vw !important;
   max-width: 100% !important;
   min-height: 100vh !important;
-  background-color: #0a0a0a;
+  /* background-color: rgb(253, 235, 213); */
+  background-color: #b4c8e0;
+  /* background-color: #abadcc; */
+  /* background: linear-gradient(rgba(146, 144, 241, 0), rgba(228, 244, 255, 0.1)), url("./src/assets/bg_3.jpg") no-repeat center; */
+  /* linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), */
   margin: 0 auto;
   padding: 0;
   display: flex;
@@ -43,7 +37,6 @@ a:hover {
 
 header {
   padding: 1rem;
-  background-color: #1a1a2e;
   color: white;
   display: flex;
   justify-content: space-between;
@@ -54,7 +47,7 @@ header {
 
 .freeBook{
   z-index: 90;
-  background-color: #b7d6f8;
+  background-color: #B6D1E2;
 }
 
 nav a {
@@ -95,7 +88,7 @@ main {
   display: flex;
   overflow: hidden;
   width: 100%;
-  max-width: 800px;
+  max-width: 80%;
   margin: auto;
 }
 .carousel img {
@@ -103,11 +96,43 @@ main {
   transition: transform 0.5s;
 }
 
+.navbar, .btn {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  font-family: 'Lora', serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Cinzel', serif;
+  overflow: hidden;
+  /* font-family: 'Montserrat'; */
+  /* font-family: 'Playfair Display', serif; */
+}
+
 footer {
   width: 100vw;
 }
 
+@media (max-width: 768px) {
+  #root {
+    /* background: url("./src/assets/bg_3.jpg") center fixed; */
+  }
+  .welcome-title {
+    margin-top: 10%;
+  }
 
+  .book-mockup{
+    width: 80%;
+  }
+}
+
+@media (max-width: 425px) {
+  .welcome-title {
+    margin-top: 25%;
+  }
+}
 
 /* 
 h1 {
